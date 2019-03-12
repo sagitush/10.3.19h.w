@@ -26,20 +26,31 @@ namespace _10._3._19h.w
                 {
                     return this.Name;
                 }
-                else if (n == "BirthTown")
+                if (n == "BirthTown")
                 {
                     return this.BirthTown;
                 }
-                else if (n == "FavoriteSpell")
+                if (n == "FavoriteSpell")
                 {
                     return this.FavoriteSpell;
                 }
-                else
+                
                     return "UnKnown";
             }
             set
             {
-                n = value;
+                if (n == "Name")
+                {
+                    this.Name=value;
+                }
+                if (n == "BirthTown")
+                {
+                    this.BirthTown=value;
+                }
+                if (n == "FavoriteSpell")
+                {
+                    this.FavoriteSpell=value;
+                }
             }
         }
 

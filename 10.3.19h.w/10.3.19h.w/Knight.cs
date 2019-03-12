@@ -27,20 +27,31 @@ namespace _10._3._19h.w
                 {
                     return this.Name;
                 }
-                else if (n == "BirthTown")
+                if (n == "BirthTown")
                 {
                     return this.BirthTown;
                 }
-                else if (n == "Title")
+                if (n == "Title")
                 {
                     return this.Title;
                 }
-                else
+                
                     return "UnKnown";
             }
             set
             {
-                n = value;
+                if (n == "Name")
+                {
+                    this.Name=value;
+                }
+                if (n == "BirthTown")
+                {
+                    this.BirthTown=value;
+                }
+                if (n == "Title")
+                {
+                    this.Title=value;
+                }
             }
         }
 

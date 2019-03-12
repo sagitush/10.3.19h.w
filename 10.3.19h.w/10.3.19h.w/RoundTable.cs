@@ -93,18 +93,18 @@ namespace _10._3._19h.w
         {
             get
             {
-                if (entities.Count < index)
+                if (entities.Count > index)
                 {
                     return entities[index];
                 }
                 else
                 {
-                    int b = 0;
-                    while (index > entities.Count)
+                    while (entities.Count<=index)
                     {
-                        b = index - entities.Count;
+                       index = index - entities.Count;
+
                     }
-                    return entities[b - 1];
+                    return entities[index];
                 }
             }
         }
@@ -115,12 +115,12 @@ namespace _10._3._19h.w
             {
                 foreach (T item in entities)
                 {
-                    if(entities.name==name)
+                    if(item.ToString()==name)
                     {
                         return item;
                     }
                 }
-                return null;
+                return default(T);
             }
         }
 

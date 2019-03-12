@@ -19,6 +19,11 @@ namespace _10._3._19h.w
             knights.Add(new Knight("lenslot", "alboin", "ser"));
             knights.Add(new Knight("galahad", "albion", "ser"));
             magicians.InsertAt(6, new Magician("kooperfield", "newyork", "megic"));
+            Console.WriteLine(magicians);
+            magicians.RemoveAt(6);
+            Console.WriteLine(magicians);
+            Console.WriteLine("----------");
+            Console.WriteLine(magicians[6]);
 
 
         }
